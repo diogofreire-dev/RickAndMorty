@@ -1,2 +1,32 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+:root {
+  --ion-color-primary: #42b883;
+}
+
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: white;
+}
+
+ion-tab-bar {
+  --background: white;
+  --color: #888;
+  --color-selected: var(--ion-color-primary);
+}
+
+.page-content {
+  padding: 16px;
+}
+
+/* Esconder botão do menu por defeito (mobile) */
+ion-menu-button {
+  display: none;
+}
+/* Mostrar botão do menu apenas em desktop e esconder os tabs */
+@media (min-width: 768px) {
+  ion-menu-button {
+    display: block;
+  }
+  ion-tab-bar {
+    display: none;
+  }
+}
